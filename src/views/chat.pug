@@ -13,3 +13,7 @@ block contenu
             
             form(action="/chat", method="get").chatbox-form
                 input(type="text", name="message", placeholder="Votre message … (Entrée pour envoyer)")
+
+block scripts
+    script(src="/socket.io/socket.io.js",defer)
+    script(src="/static/app-client.js",defer)

@@ -1,6 +1,15 @@
 import express from "express";
+import { Server } from "socket.io";
+import { createServer } from "http";
+import chatServer from './chat-serveur.js';
 
 const app = express();
+
+const httpServer = createServer(app);
+const io = new Server(httpServer);
+
+// Passe l'objet "io" à la fonction du module "./chat-server.js"
+chatServer(io);
 
 const PORT = 1337;
 
@@ -30,6 +39,6 @@ app.get('/chat/:pseudo', (request, response) => {
     });
 });
 
-app.listen(PORT, () =>
+httpServer.listen(PORT, () =>
     console.log(`L'application écoute sur http://localhost:${PORT}`)
 );
