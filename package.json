@@ -1,0 +1,19 @@
+{
+  "name": "node-tchat",
+  "version": "1.0.0",
+  "description": "Un projet de chat réalisé avec Node.js",
+  "main": "./src/app.js",
+  "author": "",
+  "scripts": {
+    "dev": "nodemon ./src/app.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
+  },
+  "type": "module"
+}

@@ -1,0 +1,12 @@
+extends layout.pug
+
+block contenu
+    h1 Choisissez un pseudo
+
+    form(action="/login", method="get")
+        .form-group
+            label(for="pseudo") Pseudonyme :
+            input(type="text", name="pseudo", id="pseudo", required, maxlength="20" placeholder="Votre pseudo...")
+        
+        .form-actions
+            button(type="submit") Se connecter
